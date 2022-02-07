@@ -1,21 +1,21 @@
 {
     "projectType": "application",
-    "root": "apps/eshop",
-    "sourceRoot": "apps/eshop/src",
+    "root": "apps/admin",
+    "sourceRoot": "apps/admin/src",
     "prefix": "shoppy",
     "targets": {
         "build": {
             "executor": "@angular-devkit/build-angular:browser",
             "outputs": ["{options.outputPath}"],
             "options": {
-                "outputPath": "dist/apps/eshop",
-                "index": "apps/eshop/src/index.html",
-                "main": "apps/eshop/src/main.ts",
-                "polyfills": "apps/eshop/src/polyfills.ts",
-                "tsConfig": "apps/eshop/tsconfig.app.json",
+                "outputPath": "dist/apps/admin",
+                "index": "apps/admin/src/index.html",
+                "main": "apps/admin/src/main.ts",
+                "polyfills": "apps/admin/src/polyfills.ts",
+                "tsConfig": "apps/admin/tsconfig.app.json",
                 "inlineStyleLanguage": "scss",
-                "assets": ["apps/eshop/src/favicon.ico", "apps/eshop/src/assets"],
-                "styles": ["apps/eshop/src/styles.scss"],
+                "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
+                "styles": ["apps/admin/src/styles.scss"],
                 "scripts": []
             },
             "configurations": {
@@ -34,8 +34,8 @@
                     ],
                     "fileReplacements": [
                         {
-                            "replace": "apps/eshop/src/environments/environment.ts",
-                            "with": "apps/eshop/src/environments/environment.prod.ts"
+                            "replace": "apps/admin/src/environments/environment.ts",
+                            "with": "apps/admin/src/environments/environment.prod.ts"
                         }
                     ],
                     "outputHashing": "all"
@@ -55,10 +55,10 @@
             "executor": "@angular-devkit/build-angular:dev-server",
             "configurations": {
                 "production": {
-                    "browserTarget": "eshop:build:production"
+                    "browserTarget": "admin:build:production"
                 },
                 "development": {
-                    "browserTarget": "eshop:build:development"
+                    "browserTarget": "admin:build:development"
                 }
             },
             "defaultConfiguration": "development"
@@ -66,20 +66,20 @@
         "extract-i18n": {
             "executor": "@angular-devkit/build-angular:extract-i18n",
             "options": {
-                "browserTarget": "eshop:build"
+                "browserTarget": "admin:build"
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["apps/eshop/src/**/*.ts", "apps/eshop/src/**/*.html"]
+                "lintFilePatterns": ["apps/admin/src/**/*.ts", "apps/admin/src/**/*.html"]
             }
         },
         "test": {
             "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/apps/eshop"],
+            "outputs": ["coverage/apps/admin"],
             "options": {
-                "jestConfig": "apps/eshop/jest.config.js",
+                "jestConfig": "apps/admin/jest.config.js",
                 "passWithNoTests": true
             }
         }

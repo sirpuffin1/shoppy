@@ -1,17 +1,17 @@
 {
-    "root": "apps/eshop-e2e",
-    "sourceRoot": "apps/eshop-e2e/src",
+    "root": "apps/admin-e2e",
+    "sourceRoot": "apps/admin-e2e/src",
     "projectType": "application",
     "targets": {
         "e2e": {
             "executor": "@nrwl/cypress:cypress",
             "options": {
-                "cypressConfig": "apps/eshop-e2e/cypress.json",
-                "devServerTarget": "eshop:serve:development"
+                "cypressConfig": "apps/admin-e2e/cypress.json",
+                "devServerTarget": "admin:serve:development"
             },
             "configurations": {
                 "production": {
-                    "devServerTarget": "eshop:serve:production"
+                    "devServerTarget": "admin:serve:production"
                 }
             }
         },
@@ -19,10 +19,10 @@
             "executor": "@nrwl/linter:eslint",
             "outputs": ["{options.outputFile}"],
             "options": {
-                "lintFilePatterns": ["apps/eshop-e2e/**/*.{js,ts}"]
+                "lintFilePatterns": ["apps/admin-e2e/**/*.{js,ts}"]
             }
         }
     },
     "tags": [],
-    "implicitDependencies": ["eshop"]
+    "implicitDependencies": ["admin"]
 }
