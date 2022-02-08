@@ -14,7 +14,12 @@
         "skipLibCheck": true,
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "@shoppy/orders": ["libs/orders/src/index.ts"],
+            "@shoppy/products": ["libs/products/src/index.ts"],
+            "@shoppy/ui": ["libs/ui/src/index.ts"],
+            "@shoppy/userss": ["libs/userss/src/index.ts"]
+        }
     },
     "exclude": ["node_modules", "tmp"]
 }
